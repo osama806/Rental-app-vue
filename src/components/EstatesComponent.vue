@@ -41,10 +41,14 @@ export default {
   async mounted() {
     this.isLoading = true
     try {
-      await axios.get("/estates")
-        .then(res => {
+      await fetch("/estates", {
+        method: 'GET',
+        mode: 'cors'
+      })
+        .then(res => res.json())
+        .then(data => {
           this.isLoading = false
-          this.estates = res.data.estates
+          this.estates = data.data.estates
         })
     } catch (error) {
       Swal.fire({
