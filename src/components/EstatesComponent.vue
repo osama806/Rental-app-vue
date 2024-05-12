@@ -41,7 +41,7 @@ export default {
   async mounted() {
     this.isLoading = true
     try {
-      await fetch("https://osama1410.infinityfreeapp.com/api/estates", {
+      await fetch("http://osama1410.infinityfreeapp.com/api/estates", {
         method: 'GET',
         mode: 'cors'
       })
