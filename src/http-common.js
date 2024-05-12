@@ -6,5 +6,5 @@ export default axios.create({
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
   },
-  mode: "cors"
+  mode: "no-cors"
 })
