@@ -43,7 +43,7 @@ export default {
     try {
       await fetch("https://osama1410.infinityfreeapp.com/api/estates", {
         method: 'GET',
-        mode: 'cors'
+        mode: 'no-cors'
       })
         .then(res => res.json())
         .then(data => {
