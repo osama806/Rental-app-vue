@@ -2,7 +2,15 @@ const { defineConfig } = require('@vue/cli-service')
 const webpack = require('webpack');
 
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === "production" ? "/Rental-app-vue/" : "/",
+  devServer:{
+    proxy: {
+      '^/users': {
+        target: 'https://osama1410.infinityfreeapp.com/',
+        ws: true,
+        changeOrigin: true
+      }
+    }
+  },
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
