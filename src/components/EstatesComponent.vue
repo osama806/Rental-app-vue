@@ -41,14 +41,11 @@ export default {
   async mounted() {
     this.isLoading = true
     try {
-      await fetch("https://osama1410.infinityfreeapp.com/api/estates", {
-        method: 'GET',
-        mode: 'cors'
-      })
-        .then(res => res.json())
-        .then(data => {
+      await axios.get("/estates")
+        .then(res => {
           this.isLoading = false
-          this.estates = data.data.estates
+          console.log("Yessssssssssssssssss");
+          this.estates = res.data.estates
         })
     } catch (error) {
       Swal.fire({
@@ -56,6 +53,7 @@ export default {
         title: error.message,
         text: 'Later try!'
       })
+      console.log("Nooooooooooooooooo");
       this.isLoading = false
     }
   }
