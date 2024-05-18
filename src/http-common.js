@@ -5,5 +5,6 @@ export default axios.create({
   headers: {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "https://osama1410.infinityfreeapp.com, https://estate-rental-app.netlify.app",
-  },
+  },      
+  credentials: 'include',
 })
