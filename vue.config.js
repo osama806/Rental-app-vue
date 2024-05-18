@@ -5,7 +5,7 @@ module.exports = defineConfig({
   devServer:{
     proxy: {
       '^/users': {
-        target: 'https://osama1410.infinityfreeapp.com/',
+        target: 'https://osama1410.infinityfreeapp.com',
         ws: true,
         changeOrigin: true
       }
