@@ -4,7 +4,6 @@ export default axios.create({
   baseURL: "https://osama1410.infinityfreeapp.com/api",
   headers: {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "https://osama1410.infinityfreeapp.com, https://estate-rental-app.netlify.app",
+    "Access-Control-Allow-Origin": "*",
   },      
-  credentials: 'include',
 })
