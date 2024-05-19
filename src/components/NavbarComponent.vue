@@ -2,7 +2,7 @@
   <div class="navbar-component position-sticky top-0 w-100 " style="z-index: 10;">
     <nav class="navbar navbar-expand-lg bg-primary ">
       <div class="container">
-        <router-link to="/" class="ms-1 text-decoration-none text-warning fw-bold fs-5 ">Estate
+        <router-link :to="{ name: 'home' }" class="ms-1 text-decoration-none text-warning fw-bold fs-5 ">Estate
           Rental</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
