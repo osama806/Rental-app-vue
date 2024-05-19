@@ -45,6 +45,8 @@ export default {
         .then(res => {
           this.isLoading = false
           console.log("Yessssssssssssssssss");
+          console.log("res.data.estates");
+          console.log("res.data");
           this.estates = res.data.estates
         })
     } catch (error) {
